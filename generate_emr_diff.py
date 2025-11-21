@@ -91,7 +91,7 @@ def generate_html(versions, data, version_series):
             background-color: #232f3e;
         }
         tr:hover td {
-            background-color: #f0f0f0;
+            font-weight: bold;
         }
     </style>
 </head>
