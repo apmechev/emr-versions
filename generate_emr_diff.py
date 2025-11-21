@@ -117,8 +117,8 @@ def generate_html(versions, data, version_series):
 
         function parseVersion(v) {
             if (v === "-") return null;
-            const match = v.match(/(\\d+)\\.(\\d+)(?:\\.(\\d+))?/);
-            return match ? [parseInt(match[1]), parseInt(match[2]), parseInt(match[3] || 0)] : null;
+            const match = v.match(/(\\d+)(?:\\.(\\d+))?(?:\\.(\\d+))?/);
+            return match ? [parseInt(match[1]), parseInt(match[2] || 0), parseInt(match[3] || 0)] : null;
         }
 
         function compareVersions(curr, prev) {
